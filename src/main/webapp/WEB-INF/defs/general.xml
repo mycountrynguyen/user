@@ -5,21 +5,39 @@
 <tiles-definitions>
     <definition name="base.definition" template="/WEB-INF/layouts/general.jsp">
         <put-attribute name="title" value="" />
-        <put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
         <put-attribute name="body" value="" />
-        <put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+        <put-list-attribute name="js">
+            <add-attribute value="js/jquery-2.1.1.min.js"/>
+            <add-attribute value="js/materialize.min.js"/>
+        </put-list-attribute>
+        <put-list-attribute name="css">
+            <add-attribute value="css/materialize.min.css"/>
+        </put-list-attribute>
     </definition>
-    <definition name="home" extends="base.definition">
+    
+    <definition name="general" extends="base.definition">
+        <put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />        
+    </definition>
+    <definition name="home" extends="general">
         <put-attribute name="title" value="User info"/>
         <put-attribute name="body" value="/WEB-INF/pages/home.jsp"/>
     </definition>
-    <definition name="login" extends="base.definition">
+    <definition name="login" extends="general">
         <put-attribute name="title" value="User info"/>
         <put-attribute name="body" value="/WEB-INF/pages/login.jsp"/>
     </definition>
+    
     <definition name="single" template="/WEB-INF/layouts/single.jsp">
         <put-attribute name="title" value=""/>
         <put-attribute name="body" value=""/>
+        <put-list-attribute name="js">
+            <add-attribute value="js/jquery-2.1.1.min.js"/>
+            <add-attribute value="js/materialize.min.js"/>
+        </put-list-attribute>
+        <put-list-attribute name="css">
+            <add-attribute value="css/materialize.min.css"/>
+        </put-list-attribute>
     </definition>
     <definition name="genkey" extends="single">
         <put-attribute name="title" value="Sinh chữ ký điện tử"/>

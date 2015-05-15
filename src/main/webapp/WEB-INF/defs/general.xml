@@ -23,9 +23,15 @@
         <put-attribute name="title" value="User info"/>
         <put-attribute name="body" value="/WEB-INF/pages/home.jsp"/>
     </definition>
-    <definition name="login" extends="general">
-        <put-attribute name="title" value="User info"/>
+    <definition name="login" extends="single">
+        <put-attribute name="title" value="Đăng nhập vào hệ thống"/>
         <put-attribute name="body" value="/WEB-INF/pages/login.jsp"/>
+        <put-list-attribute name="css" inherit="true">
+            <add-attribute value="css/pages/login.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="js" inherit="true">
+            <add-attribute value="js/pages/login.js"/>
+        </put-list-attribute>
     </definition>
     
     <definition name="single" template="/WEB-INF/layouts/single.jsp">
@@ -39,6 +45,7 @@
             <add-attribute value="css/materialize.min.css"/>
         </put-list-attribute>
     </definition>
+    
     <definition name="keygen" extends="single">
         <put-attribute name="title" value="Sinh chữ ký điện tử"/>
         <put-attribute name="body" value="/WEB-INF/pages/keygen.jsp"/>

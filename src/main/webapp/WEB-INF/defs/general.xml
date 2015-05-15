@@ -39,8 +39,14 @@
             <add-attribute value="css/materialize.min.css"/>
         </put-list-attribute>
     </definition>
-    <definition name="genkey" extends="single">
+    <definition name="keygen" extends="single">
         <put-attribute name="title" value="Sinh chữ ký điện tử"/>
-        <put-attribute name="body" value="/WEB-INF/pages/genkey.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/pages/keygen.jsp"/>
+        <put-list-attribute name="css" inherit="true">
+            <add-attribute value="css/pages/keygen.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="js" inherit="true">
+            <add-attribute value="js/jsencrypt.min.js"/>
+        </put-list-attribute>
     </definition>
 </tiles-definitions>

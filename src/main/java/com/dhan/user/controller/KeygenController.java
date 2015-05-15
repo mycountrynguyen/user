@@ -5,9 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class GenerateKeyController {
-    @RequestMapping(value = "/genkey")
+public class KeygenController {
+    @RequestMapping(value = "/keygen")
     public String genkey(Model model) {
-        return "genkey";
+        return "keygen";
     }
 }
